@@ -1,8 +1,15 @@
 {
-    "python.condaPath": "C:\\ProgramData\\anaconda3\\Scripts\\conda.exe",
+    "python.condaPath": "C:\\ProgramData\\anaconda3\\condabin\\conda.bat",
     "python.terminal.activateEnvironment": true,
     "terminal.integrated.env.windows": {
-        "PATH": "C:\\ProgramData\\anaconda3;C:\\ProgramData\\anaconda3\\Scripts;C:\\ProgramData\\anaconda3\\Library\\bin;${env:PATH}"
+        "PATH": "C:\\ProgramData\\anaconda3\\condabin;C:\\ProgramData\\anaconda3\\Scripts;C:\\ProgramData\\anaconda3;${env:PATH}"
     },
-    "terminal.integrated.defaultProfile.windows": "PowerShell"
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "args": ["-NoExit", "-Command", "Set-Alias -Name conda -Value 'C:\\ProgramData\\anaconda3\\condabin\\conda.bat'"]
+        }
+    }
 }
