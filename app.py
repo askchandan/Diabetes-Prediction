@@ -6,7 +6,7 @@ import pickle
 application = Flask(__name__)
 app=application
 
-scaler=pickle.load(open("Model/standardScalar.pkl", "rb"))
+scaler=pickle.load(open("Model/StandardScalar.pkl", "rb"))
 model = pickle.load(open("Model/DecisionTreeClassifier.pkl", "rb"))
 
 ## Route for homepage
